@@ -18,7 +18,7 @@ public class UsernameHandling {
 		if(isValid)
 			checkResponse = new CheckResponse(isValid, suggestions);
 		else{
-			suggestions = getSuggestions(username, existing);
+			suggestions = getSuggestions(username.toLowerCase(), existing);
 			checkResponse = new CheckResponse(isValid, suggestions);
 		}
 		return checkResponse;

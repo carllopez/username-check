@@ -43,8 +43,10 @@ public class UsernameApplication {
 		}
 		
 
-		if(!checkResponse.valid)
-			logger.info(checkResponse.suggestions);
+		if(!checkResponse.valid){
+			for (String suggestion: checkResponse.suggestions)
+				logger.info("Suggestion: " + suggestion);
+		}
 		else
 			logger.info("It is a valid username, congratulations!");
 
